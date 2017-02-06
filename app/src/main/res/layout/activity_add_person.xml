@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_person"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <DatePicker
+        android:id="@+id/pickedDate"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_weight="0.27"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <EditText
+        android:id="@+id/neckBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterNeck"
+        android:inputType="none|numberDecimal" />
+
+    <EditText
+        android:id="@+id/chestBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterChest"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/waistBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterWaist"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/bustBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterBust"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/hipBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterHip"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inseamBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterInseam"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/commentBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:hint="@string/EnterComment"
+        android:inputType="none|textLongMessage" />
+
+    <Button
+        android:id="@+id/addInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addInfo" />
+
+    <Button
+        android:id="@+id/deleteInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete" />
+
+</LinearLayout>

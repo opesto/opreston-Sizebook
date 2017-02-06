@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">opreston-SizeBook</string>
+    <string name="addName">add person</string>
+    <string name="enterDateMessage">yyyy-mm-dd when sizes recorded</string>
+    <string name="addInfo">add</string>
+    <string name="delete">delete</string>
+    <string name="EnterName">Enter name</string>
+    <string name="EnterNeck">Enter neck size (Circumference in inches)</string>
+    <string name="EnterBust">Enter bust size (Circumference in inches)</string>
+    <string name="EnterChest">Enter chest size (Circumference in inches)</string>
+    <string name="EnterWaist">Enter waist size (Circumference in inches)</string>
+    <string name="EnterHip">Enter hip size (Circumference in inches)</string>
+    <string name="EnterInseam">Enter inseam length (length in inches)</string>
+    <string name="EnterComment">Extra information</string>
+</resources>
