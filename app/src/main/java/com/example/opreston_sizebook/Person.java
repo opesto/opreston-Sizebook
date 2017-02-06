@@ -5,7 +5,10 @@ import java.util.Locale;
 
 /**
  * Created by olivier on 2017-02-04.
+ *
+ * This is my person class used for storing a Person object's sizing information
  */
+
 
 public class Person {
     private String personMessage;
@@ -114,6 +117,11 @@ public class Person {
         this.comment = comment;
     }
 
+    /**
+     * Concatenates all sizing info into one long string
+     * @return a string used for being printed in my MainActivity listview
+     * of every person
+     */
     public String toStringView() {
         personMessage = String.format("Name: %s\n", name);
 

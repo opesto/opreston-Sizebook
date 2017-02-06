@@ -1,5 +1,9 @@
 package com.example.opreston_sizebook;
 
+/**
+ * Created by olivier on 2017-02-04.
+ */
+
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
@@ -30,7 +34,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * This is my activity class for editing the person and their sizes
+ * This is my activity class for editing the person and their sizes. We can edit all sizing
+ * aspects about a person or delete that person in this activity
  */
 public class AddPersonActivity extends AppCompatActivity {
     private DatePicker datePicker;

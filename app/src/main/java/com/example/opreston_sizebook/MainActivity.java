@@ -1,5 +1,9 @@
 package com.example.opreston_sizebook;
 
+/**
+ * Created by olivier on 2017-02-04.
+ */
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -31,7 +35,13 @@ import java.util.Date;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
+/**
+ * main activity class where app begins. all file saving and loading takes place in this class.
+ * This class uses a list view to display people and their sizing info.
+ */
+
 public class MainActivity extends AppCompatActivity {
+
     private EditText bodyText;
     private ListView personListView;
     public final static String EXTRA_MESSAGE = "com.example.opreston_sizebook";
@@ -42,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
     private int personCount;
     private static final String FILENAME = "file.sav";
 
+    /**
+     * called when activity is first created
+     * @param savedInstanceState saved info about the state of the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.list_item, stringViewList);
         personListView.setAdapter(adapter);
 
+
+        /**
+         * button method that responds to a person from personListView being selected.
+         * Intent is created adn user is sent to addPersonActivity
+         */
         personListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -78,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This function starts the AddPersonActivity when the add person button is selected
-     * @param view
+     * @param view current view
      */
     public void addPerson(View view) {
         Intent intent = new Intent(this, AddPersonActivity.class);
@@ -92,19 +111,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method receives data from the AddPersonActivity
+     * This method receives data from the AddPersonActivity after the user returns to
+     * MainActivity. this is the first method run when returning from the AddPersonActivity
      *
-     * @param requestCode
-     * @param resultCode
-     * @param data
+     * @param requestCode code for receceiving intent data
+     * @param resultCode code used to verify data sent properly
+     * @param data  intent of data being received
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         super.onActivityResult(requestCode, resultCode, data);
-        // Check which request we're responding to
         if (requestCode == PICK_CONTACT_REQUEST) {
-            // Make sure the request was successful
             if (resultCode == RESULT_OK) {
                 Gson gS = new Gson();
 
@@ -126,6 +143,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method loads the personList containing all the Person objects
+     */
     private void loadFromFile() {
 
         try {
@@ -145,6 +165,10 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException();
         }
     }
+
+    /**
+     * This method saves all the Person objects into PersonList
+     */
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,
